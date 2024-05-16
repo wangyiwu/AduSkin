@@ -1,0 +1,608 @@
+<UserControl x:Class="LightGood.UserControls.CommonControlCase"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:AduSkin="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:AduAttach="clr-namespace:AduSkin.Controls.Attach;assembly=AduSkin"
+             mc:Ignorable="d" 
+             d:DesignHeight="2000" d:DesignWidth="1000">
+   <Grid Background="{StaticResource DefaultBackground}" >
+      <AduSkin:MetroScrollViewer HorizontalScrollBarVisibility="Disabled">
+         <AduSkin:MetroWaterfallFlow x:Name="waterfallFlow" ListWidth="300">
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <AduSkin:AduAnimationPath Width="100" Height="100" VerticalAlignment="Center" Data="{StaticResource Icon_Github}" Stretch="Uniform" Stroke="{DynamicResource DefaultBrush}" StrokeThickness="3"  Duration="0:0:6" />
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <WrapPanel Orientation="Horizontal">
+                     <AduSkin:MetroColorPicker x:Name="color1" Width="50" Height="50" Padding="5" Background="#EE796F" DefaultColor="#EE796F" />
+                     <AduSkin:MetroColorPicker x:Name="color2" Width="50" Height="50" Padding="5" Background="#6D819A" DefaultColor="#6D819A" IsEnabled="False" />
+                  </WrapPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <AduSkin:AduRunningBlock Duration="0:0:20" Margin="0,0,0,10">
+                        <StackPanel Orientation="Horizontal">
+                           <Border Padding="5,0">
+                              <Image Source="../Resources/Img/Header/avt1.png" Width="32" Height="32" />
+                           </Border>
+                           <Border Padding="5,0">
+                              <Image Source="../Resources/Img/Header/avt2.png" Width="32" Height="32" />
+                           </Border>
+                           <Border Padding="5,0">
+                              <Image Source="../Resources/Img/Header/avt3.png" Width="32" Height="32"/>
+                           </Border>
+                           <Border Padding="5,0">
+                              <Image Source="../Resources/Img/Header/avt4.png" Width="32" Height="32"/>
+                           </Border>
+                           <Border Padding="5,0" >
+                              <Image Source="../Resources/Img/Header/avt5.png" Width="32" Height="32"/>
+                           </Border>
+                           <Border Padding="5,0" >
+                              <Image Source="../Resources/Img/Header/avt6.png" Width="32" Height="32"/>
+                           </Border>
+                        </StackPanel>
+                     </AduSkin:AduRunningBlock>
+                     <AduSkin:AduRunningBlock Content="AduSkin - Theo đuổi sự hoàn hảo cuối cùng, Yongzhen" FontSize="16" FontWeight="Light" Foreground="OrangeRed" Duration="0:0:10"/>
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <AduSkin:AduGroupBoxLight Header="tiêu đề" Width="280">
+                     <TextBlock Text="nội dung" Margin="10"/>
+                  </AduSkin:AduGroupBoxLight>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <AduSkin:AduCalendar x:Name="Calendar1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           AduAttach:BackgroundAttach.MouseOverBackground="{StaticResource DefaultBrush}"
+                           AduAttach:BackgroundAttach.SelectedBackground="{StaticResource DefaultBrush}"
+                           AduAttach:BackgroundAttach.HighlightBackground="{StaticResource DefaultBrush}"
+                           AduAttach:ForegroundAttach.SelectedForeground="#FFF"
+                           AduAttach:ForegroundAttach.MouseOverForeground="#FFF"
+                           AduAttach:ForegroundAttach.HighlightForeground="#FFF"/>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <AduSkin:AduTimePicker HorizontalAlignment="Left" Margin="4" Width="200"/>
+                     <AduSkin:AduDatePicker x:Name="Date1" HorizontalAlignment="Left" Margin="4" Width="200" VerticalAlignment="Center" Height="28" Type="DateTime"  CornerRadius="3" DateStringFormat="yyyy/MM/dd"
+                              AduAttach:BackgroundAttach.PanelBackground="{StaticResource DefaultWhiteBrush}"
+                              AduAttach:BackgroundAttach.MouseOverBackground="{StaticResource DefaultBrush}"
+                              AduAttach:BackgroundAttach.SelectedBackground="{StaticResource DefaultBrush}"
+                              AduAttach:BackgroundAttach.HighlightBackground="{StaticResource DefaultBrush}"
+                              AduAttach:ForegroundAttach.SelectedForeground="{StaticResource DefaultWhiteBrush}"
+                              AduAttach:ForegroundAttach.MouseOverForeground="{StaticResource DefaultWhiteBrush}"
+                              AduAttach:ForegroundAttach.HighlightForeground="{StaticResource DefaultWhiteBrush}"/>
+                     <AduSkin:AduDatePicker x:Name="Date2" Margin="4" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Height="28" CornerRadius="3"
+                                          AduAttach:BackgroundAttach.PanelBackground="{StaticResource DefaultWhiteBrush}"/>
+                     <AduSkin:AduDatePicker x:Name="Date3" Margin="4" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Height="28" CornerRadius="3" IsShowShortCuts="True" 
+                                          AduAttach:BackgroundAttach.PanelBackground="{StaticResource DefaultWhiteBrush}"/>
+                     <AduSkin:AduDatePicker x:Name="Date4" Margin="4" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left" Height="28" Type="SingleDateRange" CornerRadius="3" DateStringFormat="yyyy/MM/dd" IsShowShortCuts="True" 
+                                          AduAttach:BackgroundAttach.PanelBackground="{StaticResource DefaultWhiteBrush}"/>
+                     <AduSkin:AduDatePicker x:Name="Date5" HorizontalAlignment="Left" Margin="4" Width="240" VerticalAlignment="Center" Height="28" Type="SingleDateRange" CornerRadius="3"
+                                          AduAttach:BackgroundAttach.PanelBackground="{StaticResource DefaultWhiteBrush}"/>
+                     <AduSkin:AduDatePicker x:Name="Date6" HorizontalAlignment="Left" Margin="4" Width="240" VerticalAlignment="Center" Height="28" Type="SingleDateRange" CornerRadius="3"
+                                          AduAttach:BackgroundAttach.PanelBackground="{StaticResource DefaultWhiteBrush}"/>
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <AduSkin:AduLoading Margin="0,0,0,20" SpeedRatio=".5" Type="Cogs" IsActived="True"/>
+                     <AduSkin:AduLoading Margin="0,0,0,20" SpeedRatio="1" Type="SingleRound" IsActived="True"/>
+                     <AduSkin:AduLoading Margin="0,0,0,20" SpeedRatio="1" Type="DoubleRound" IsActived="True"/>
+                     <AduSkin:AduLoading Margin="0,0,0,20" SpeedRatio="1" Type="Apple" IsActived="True"/>
+                     <AduSkin:AduLoading Margin="0,0,0,20" SpeedRatio="1" Type="Lines" IsActived="True" Height="30"/>
+                     <AduSkin:AduLoading Margin="0,0,0,0" SpeedRatio="1" Type="Rotate" IsActived="True" Width="40" Height="40"/>
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <AduSkin:AduRadioButtonIcon
+                        Content="Hộp"
+                        IsChecked="True"
+                        AduAttach:PathDataAttach.PathData="{StaticResource Icon_Desgin2}"
+                        AduAttach:PathBrushAttach.SelectedPathColor="{StaticResource ShadowColor}"
+                        AduAttach:PathDataAttach.Margin="20,0"
+                        AduAttach:PathDataAttach.Width="16"/>
+                     <AduSkin:AduRadioButtonIcon
+                        Content="thực đơn"
+                        AduAttach:PathDataAttach.PathData="{StaticResource Icon_Fold}"
+                        AduAttach:PathBrushAttach.SelectedPathColor="{StaticResource ShadowColor}"
+                        AduAttach:PathDataAttach.Margin="20,0"
+                        AduAttach:PathDataAttach.Width="16"/>
+                     <AduSkin:AduRadioButtonIcon
+                        Content="Vòng xoay"
+                        AduAttach:PathDataAttach.PathData="{StaticResource Icon_Carousel}"
+                        AduAttach:PathBrushAttach.SelectedPathColor="{StaticResource ShadowColor}"
+                        AduAttach:PathDataAttach.Margin="20,0"
+                        AduAttach:PathDataAttach.Width="16"/>
+                     <AduSkin:AduRadioButtonIcon
+                        Content="Nhóm"
+                        AduAttach:PathDataAttach.PathData="{StaticResource Icon_Group}"
+                        AduAttach:PathBrushAttach.SelectedPathColor="{StaticResource ShadowColor}"
+                        AduAttach:PathDataAttach.Margin="20,0"
+                        AduAttach:PathDataAttach.Width="16"/>
+                     <AduSkin:AduRadioButtonIcon
+                        Content="Mốc thời gian"
+                        AduAttach:PathDataAttach.PathData="{StaticResource Icon_TimeLine}"
+                        AduAttach:PathBrushAttach.SelectedPathColor="{StaticResource ShadowColor}"
+                        AduAttach:PathDataAttach.Margin="20,0"
+                        AduAttach:PathDataAttach.Width="16"/>
+                     <AduSkin:AduRadioButtonIcon
+                        Content="Thác nước chảy"
+                        AduAttach:PathDataAttach.PathData="{StaticResource Icon_Waterfall}"
+                        AduAttach:PathBrushAttach.SelectedPathColor="{StaticResource ShadowColor}"
+                        AduAttach:PathDataAttach.Margin="20,0"
+                        AduAttach:PathDataAttach.Width="16"/>
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <StackPanel Orientation="Horizontal">
+                        <AduSkin:AduCheckBox Content="Vô hiệu hóa được chọn không hoàn toàn" FontSize="14" AduAttach:PathDataAttach.Width="16" IsChecked="False" IsEnabled="False" />
+                        <AduSkin:AduCheckBox Content="Không được giải thích theo mặc định" FontSize="14" AduAttach:PathDataAttach.Width="16" IsChecked="False" />
+                     </StackPanel>
+                     <StackPanel Orientation="Horizontal">
+                        <AduSkin:AduCheckBox Content="Vô hiệu hóa được chọn" FontSize="14" AduAttach:PathDataAttach.Width="16" IsChecked="True" IsEnabled="False" />
+                        <AduSkin:AduCheckBox Content="Theo mặc định, chọn" FontSize="14" AduAttach:PathDataAttach.Width="16" IsChecked="True" />
+                     </StackPanel>
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel  >
+                     <AduSkin:AduComboBox x:Name="site" Height="30" IsEditable="True" InputHint="xin vui lòng chọn" IsShowFilterBox="True" Background="Transparent" Margin="10,10,0,10"
+                                        AduAttach:BorderAttach.CornerRadius="3"/>
+                     <AduSkin:AduComboBox x:Name="size" Width="auto" Height="30" SelectedIndex="0" Margin="10,10,0,10" AduAttach:BorderAttach.CornerRadius="3"/>
+
+                     <AduSkin:AduCheckComboBox x:Name="subject" Width="auto" Height="30" IsShowFilterBox="True" SelectedIndex="0" Margin="10,10,0,10" AduAttach:BorderAttach.CornerRadius="3"/>
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                     <AduSkin:AduIntegerUpDown Width="100" Maximum="20"
+                                          Minimum="0" Value="15" UpDownOrientation="Horizontal" />
+                     <AduSkin:AduIntegerUpDown Width="100" Height="30" Margin="10,0" Maximum="20"
+                                          Minimum="0" Value="15" UpDownOrientation="Vertical" />
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <AduSkin:AduUpload Height="100" BorderBrush="{StaticResource DefaultBrush}" Foreground="{StaticResource DefaultBrush}"/>
+               </Border>
+            </Grid>
+            <Grid Height="250">
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <AduSkin:MetroScrollViewer>
+                     <StackPanel>
+                        <AduSkin:AduNoExpander Header="Không gấp" IsExpanded="True">
+                           <StackPanel HorizontalAlignment="Left">
+                              <AduSkin:AduRadioButton Content="Hộp đơn" FontSize="14" AduAttach:PathDataAttach.Width="16" IsChecked="True" />
+                              <AduSkin:AduRadioButton Content="Hộp đơn" FontSize="14" AduAttach:PathDataAttach.Width="16" />
+                           </StackPanel>
+                        </AduSkin:AduNoExpander>
+                        <AduSkin:AduExpander Header="Có thể gập lại" IsEnabled="True" IsExpanded="True" AduAttach:PathDataAttach.PathData="{StaticResource Icon_Logo}" AduAttach:PathDataAttach.Width="14" AduAttach:PathDataAttach.Margin="4,0,10,2">
+                           <StackPanel>
+                              <AduSkin:AduCheckBox Content="Hộp kiểm" FontSize="14" AduAttach:PathDataAttach.Width="16" IsChecked="True" />
+                              <AduSkin:AduCheckBox Content="Hộp kiểm" FontSize="14" AduAttach:PathDataAttach.Width="16" IsChecked="True" />
+                              <AduSkin:AduCheckBox Content="Hộp kiểm" FontSize="14" AduAttach:PathDataAttach.Width="16" IsChecked="True" />
+                              <AduSkin:AduCheckBox Content="Hộp kiểm" FontSize="14" AduAttach:PathDataAttach.Width="16" IsChecked="True" AduAttach:PathDataAttach.PathData="{StaticResource Icon_NoChecked}" AduAttach:PathDataAttach.SelectedPathData="{StaticResource Icon_Checked}"/>
+                              <AduSkin:AduCheckBox FontSize="14" AduAttach:PathDataAttach.Margin="0" AduAttach:PathDataAttach.Width="16" AduAttach:PathDataAttach.PathData="{StaticResource Icon_Plugin}" AduAttach:PathDataAttach.SelectedPathData="{StaticResource Icon_Browser}"  />
+                           </StackPanel>
+                        </AduSkin:AduExpander>
+                     </StackPanel>
+                  </AduSkin:MetroScrollViewer>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <AduSkin:AduSlider Maximum="1000" Value="500" Margin="0,10" Height="20"
+                           AduAttach:PathDataAttach.Width="10" 
+                           AduAttach:BorderAttach.CornerRadius="3"
+                           AduAttach:BackgroundAttach.PanelBackground="#10000000"
+                           AduAttach:PathBrushAttach.NormalPathColor="#90000000"/>
+                     <AduSkin:AduFlatSilder Maximum="1000" Value="500" Margin="0,10" Height="17"/>
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <AduSkin:AduRatingBar VerticalAlignment="Center" Height="30" Value="3" IsShowContent="True" IsReadOnly="False"/>
+                     <AduSkin:AduRatingBar VerticalAlignment="Center" Height="30" Value="3.7"/>
+                     <AduSkin:AduRatingBar VerticalAlignment="Center" Height="30" Value="3" Maximum="10" IsShowContent="True" ContentStringFormat="{}{0}星" />
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <AduSkin:MetroTextBlock Opacity="0.65" Text="Tự động điều chỉnh kích thước, bất kể PPI của hình ảnh" />
+                     <AduSkin:MetroImage Margin="0,5,0,0" Source="../Resources/pic.jpg" RenderOptions.BitmapScalingMode="Fant"/>
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <AduSkin:AduRadioButton
+                                                                Content="Vô hiệu hóa được chọn"
+                                                                FontSize="14"
+                                                                AduAttach:PathDataAttach.Width="16"
+                                                                IsEnabled="False" />
+                        <AduSkin:AduRadioButton
+                                                                Content="Vô hiệu hóa được chọn"
+                                                                FontSize="14"
+                                                                AduAttach:PathDataAttach.Width="16"
+                                                                IsChecked="True"
+                                                                IsEnabled="False" />
+                     </StackPanel>
+                     <StackPanel Orientation="Horizontal">
+                        <AduSkin:AduRadioButton
+                                                                Content="Vô hiệu hóa được chọn"
+                                                                FontSize="14"
+                                                                AduAttach:PathDataAttach.Width="16"
+                                                                IsChecked="False" />
+                        <AduSkin:AduRadioButton
+                                                                Content="Vô hiệu hóa được chọn"
+                                                                FontSize="14"
+                                                                AduAttach:PathDataAttach.Width="16"
+                                                                IsChecked="True" />
+                     </StackPanel>
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <AduSkin:MetroSwitch
+                                                        Margin="10"
+                                                        Content="Tắt và vô hiệu hóa"
+                                                        IsEnabled="False" />
+                     <AduSkin:MetroSwitch
+                                                        Margin="10"
+                                                        Content="Mở cấm"
+                                                        IsChecked="true"
+                                                        IsEnabled="False" />
+                     <AduSkin:MetroSwitch
+                                                        Margin="10"
+                                                        Content="Có thể sửa đổi phương thức căn chỉnh"
+                                                        IsChecked="true"
+                                                        TextHorizontalAlignment="Right" />
+                     <AduSkin:MetroSwitch
+                                                        x:Name="ts"
+                                                        Margin="10"
+                                                        Content="Hoạt hình đặc biệt"
+                                                        CornerRadius="100" />
+                     <AduSkin:MetroSwitch
+                                                        Margin="10"
+                                                        BorderCornerRadius="3"
+                                                        Content="Chế độ chặn"
+                                                        CornerRadius="2" />
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <AduSkin:AduFormLable Title="Lựa chọn ngày" ErrorVisibility="Collapsed" TitleForeground="Red">
+                        <AduSkin:AduDatePicker CornerRadius="3"/>
+                     </AduSkin:AduFormLable>
+                     <AduSkin:AduFormLable Title="Lựa chọn thả xuống" Margin="0,10,0,0">
+                        <AduSkin:AduComboBox>
+                           <ComboBoxItem Content="Thượng Hải" Tag="1" IsSelected="True"/>
+                           <ComboBoxItem Content="Bắc Kinh" Tag="1" />
+                           <ComboBoxItem Content="Quảng Châu" Tag="1" />
+                        </AduSkin:AduComboBox>
+                     </AduSkin:AduFormLable>
+                     <AduSkin:AduFormLable Title="tên tài khoản" Margin="0,10,0,0"  >
+                        <AduSkin:MetroTextBox/>
+                     </AduSkin:AduFormLable>
+                     <AduSkin:AduFormLable Title="mật khẩu" Margin="0,10,0,0"  ErrorMessage="Vui lòng nhập các chữ cái 0-6 bit" ErrorVisibility="Visible">
+                        <AduSkin:AduPasswordBox/>
+                     </AduSkin:AduFormLable>
+                     <AduSkin:AduFormLable Title="Chọn thư mục" Margin="0,10,0,0">
+                        <AduSkin:AduChooseBox AduChooseBoxType="SingleFile"/>
+                     </AduSkin:AduFormLable>
+                     <AduSkin:AduPasswordBox Margin="0,10,0,10"  Height="30" IsCanSeePassword="True" Password="{Binding Path=DemoPassWord,Mode=OneWayToSource}" InputHint="请输入密码"></AduSkin:AduPasswordBox>
+                     <AduSkin:MetroTextBox
+                                                        x:Name="password"
+                                                        ButtonTitle="Chắc chắn"
+                                                        InputHint="PassWord Input Box!"
+                                                        IsPassWordBox="True"
+                                                        PopupHint="Xin vui lòng nhập mật khẩu" />
+                     <AduSkin:MetroTextBox
+                                                        Margin="0,10,0,0"
+                                                        InputHint="InputHint..."
+                                                        PopupHint="This is TextBox!" />
+                     <AduSkin:MetroTextBox Margin="0,10,0,0" />
+                     <AduSkin:MetroTextBox
+                                                        Title="Default Title"
+                                                        Margin="0,10,0,0"
+                                                        InputHint="InputHint..."
+                                                        PopupHint="This is TextBox!" />
+                     <AduSkin:MetroTextBox
+                                                        x:Name="check"
+                                                        Title="Default Title"
+                                                        Margin="0,10,0,0"
+                                                        ButtonTitle="Button"
+                                                        Icon="../Resources/editIcon.png"
+                                                        InputHint="InputHint..."
+                                                        PopupHint="Length is more than 10!" />
+                     <AduSkin:MetroTextBox
+                                                        x:Name="check1"
+                                                        Title="Default Title"
+                                                        Margin="0,10,0,0"
+                                                        ButtonTitle="Button"
+                                                        Icon="../Resources/editIcon.png"
+                                                        InputHint="InputHint..."
+                                                        PopupHint="Length is more than 10!"
+                                                        Text="0123456789" />
+                     <AduSkin:MetroTextBox
+                                                        Title="Default Title"
+                                                        Margin="0,10,0,0"
+                                                        ButtonTitle="Button"
+                                                        Icon="../Resources/editIcon.png"
+                                                        InputHint="InputHint..."
+                                                        MultipleLine="True"
+                                                        PopupHint="Đây là một hộp chỉnh sửa đa dòng!"
+                                                        Text="This is Content!" />
+                     <AduSkin:MetroTextBox
+                                                        Title="Default Title"
+                                                        Margin="0,10,0,0"
+                                                        ButtonTitle="Button"
+                                                        Icon="../Resources/editIcon.png"
+                                                        InputHint="InputHint..."
+                                                        IsEnabled="False"
+                                                        PopupHint="Length is more than 10!" />
+                     <AduSkin:MetroTextBox
+                                                        Title="Default Title"
+                                                        Margin="0,10,0,0"
+                                                        ButtonTitle="Button"
+                                                        Icon="../Resources/editIcon.png"
+                                                        InputHint="InputHint..."
+                                                        IsEnabled="False"
+                                                        PopupHint="Length is more than 10!"
+                                                        Text="Đã nhập và tắt" />
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel HorizontalAlignment="Center">
+                     <StackPanel Orientation="Horizontal">
+                        <AduSkin:AduFlatButton Margin="10" Content="Màu mặc định" IsEnabled="False" Type="success" />
+                        <AduSkin:AduFlatButton Margin="10" Content="Màu mặc định" Type="success" />
+                     </StackPanel>
+                     <StackPanel Orientation="Horizontal">
+                        <AduSkin:AduFlatButton Margin="10" Content="Lỗi"  IsEnabled="False" Type="warning" />
+                        <AduSkin:AduFlatButton Margin="10" Content="Lỗi" Type="warning" />
+                     </StackPanel>
+                     <StackPanel Orientation="Horizontal">
+                        <AduSkin:AduFlatButton Margin="10" Content="Lỗi"  IsEnabled="False" Type="info" />
+                        <AduSkin:AduFlatButton Margin="10" Content="Lỗi" Type="info" />
+                     </StackPanel>
+                     <StackPanel Orientation="Horizontal">
+                        <AduSkin:AduFlatButton  Margin="10" Content="Màu chính xác" IsEnabled="False" Type="error" />
+                        <AduSkin:AduFlatButton Name="btnShowAdu" Margin="10" Content="Màu chính xác" Type="error" />
+                     </StackPanel>
+                     <StackPanel Orientation="Horizontal">
+                        <AduSkin:AduButtonSvg AduAttach:PathDataAttach.PathData="{StaticResource Icon_Logo}"  AduAttach:PathDataAttach.Width="20" Foreground="#999" Height="40" Width="40" />
+                        <AduSkin:AduButtonIcon Height="40" Margin="10" Content="hehhe" Foreground="#000"  VerticalContentAlignment="Center" 
+                              AduAttach:PathDataAttach.PathData="{StaticResource Icon_Logo}" AduAttach:PathBrushAttach.NormalPathColor="{StaticResource DefaultBrush}"
+                              AduAttach:PathDataAttach.Width="16" AduAttach:PathDataAttach.Margin="0,0,10,0" AduAttach:BorderAttach.CornerRadius="6"/>
+                        <AduSkin:AduToggleButton 
+                           AduAttach:BorderAttach.BorderThickness="1" 
+                           AduAttach:BorderAttach.BorderBrush="#30000000" 
+                           AduAttach:BorderAttach.CornerRadius="15"    
+                           AduAttach:PathDataAttach.Width="14"
+                           AduAttach:PathDataAttach.PathData="{StaticResource Icon_Bluetooth}"
+                           AduAttach:PathDataAttach.SelectedPathData="{StaticResource Icon_Bluetooth}"
+                           AduAttach:PathBrushAttach.SelectedPathColor="{StaticResource DefaultBrush}"
+                           AduAttach:PathBrushAttach.NormalPathColor="{StaticResource PrimaryBrush}"
+                           AduAttach:PathBrushAttach.MouseOverPathColor="#90000000"
+                           AduAttach:BackgroundAttach.SelectedBackground="#30000000" 
+                           AduAttach:BackgroundAttach.MouseOverBackground="#10000000" 
+                           Width="30" Height="30"/>
+                        <AduSkin:AduPathIconButton Margin="10,0"
+                            BorderThickness="1" BorderBrush="#30000000" 
+                            AduAttach:BorderAttach.CornerRadius="15" 
+                            AduAttach:PathDataAttach.Width="14"
+                            AduAttach:PathDataAttach.PathData="{StaticResource Icon_Bluetooth}"
+                            AduAttach:PathDataAttach.SelectedPathData="{StaticResource Icon_Bluetooth}"
+                            AduAttach:PathBrushAttach.SelectedPathColor="{StaticResource DefaultBrush}"
+                            AduAttach:PathBrushAttach.NormalPathColor="{StaticResource PrimaryBrush}"
+                            AduAttach:PathBrushAttach.MouseOverPathColor="#90000000"
+                            AduAttach:BackgroundAttach.SelectedBackground="#30000000" 
+                            AduAttach:BackgroundAttach.MouseOverBackground="#10000000" 
+                            Width="30" Height="30"/>
+                     </StackPanel>
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel Orientation="Horizontal">
+                     <AduSkin:AduButtonRemind AduAttach:PathDataAttach.PathData="{StaticResource Icon_Demo}" AduButtonState="Green" AduAttach:PathDataAttach.Width="20" Foreground="{StaticResource DefaultBrush}" Hint="99+" Height="40" Width="40" />
+                     <AduSkin:AduButtonRemind AduAttach:PathDataAttach.PathData="{StaticResource Icon_Demo}" AduButtonState="Red" AduAttach:PathDataAttach.Width="20" Foreground="{StaticResource DefaultBrush}" Hint="99+" Height="40" Width="40" />
+                     <AduSkin:AduButtonRemind AduAttach:PathDataAttach.PathData="{StaticResource Icon_Demo}" AduButtonState="Blue" AduAttach:PathDataAttach.Width="20" Foreground="{StaticResource DefaultBrush}" Hint="99+" Height="40" Width="40" />
+                     <AduSkin:AduButtonRemind AduAttach:PathDataAttach.PathData="{StaticResource Icon_Demo}" AduButtonState="None" AduAttach:PathDataAttach.Width="20" Foreground="{StaticResource DefaultBrush}" Hint="99+" Height="40" Width="40" />
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <AduSkin:MetroRichTextBox MaxHeight="50" Margin="5" CornerRadius="1" IsEnabled="False">
+                        <FlowDocument>
+                           <Paragraph>
+                              <Run Text="Vô hiệu hóa" />
+                           </Paragraph>
+                        </FlowDocument>
+                     </AduSkin:MetroRichTextBox>
+                     <AduSkin:MetroRichTextBox x:Name="rt1" MaxHeight="50" Margin="5" CornerRadius="1"  IsReadOnly="True">
+                        <FlowDocument>
+                           <Paragraph>
+                              <Run Text="Chế độ đọc" />
+                           </Paragraph>
+                        </FlowDocument>
+                     </AduSkin:MetroRichTextBox>
+                     <AduSkin:MetroRichTextBox
+                                                            x:Name="rt3"
+                                                            MaxHeight="100"
+                                                            Margin="5"
+                                                            AutoLimitMouse="True"
+                                                            CornerRadius="1">
+                        <FlowDocument>
+                           <Paragraph>
+                              <Run Text="Nội dung bổ sung" />
+                           </Paragraph>
+                           <Paragraph>
+                              <Run Text="Chiều cao tự động" />
+                           </Paragraph>
+                        </FlowDocument>
+                     </AduSkin:MetroRichTextBox>
+                     <AduSkin:MetroRichTextBox
+                                                            MaxHeight="100"
+                                                            Margin="5"
+                                                            Background="#00000000"
+                                                            BorderThickness="0"
+                                                            CornerRadius="0"
+                                                            IsEnabled="False">
+                        <FlowDocument>
+                           <Paragraph>
+                              <Run Text="Biến đổi MetroRichTextBox" />
+                           </Paragraph>
+                           <Paragraph>
+                              <Run Text="Vô hiệu hóa" />
+                           </Paragraph>
+                        </FlowDocument>
+                     </AduSkin:MetroRichTextBox>
+                     <AduSkin:MetroRichTextBox
+                                                            MaxHeight="100"
+                                                            Margin="5"
+                                                            Background="#00000000"
+                                                            BorderThickness="0"
+                                                            CornerRadius="0">
+                        <FlowDocument>
+                           <Paragraph>
+                              <Run Text="Biến đổi MetroRichTextBox" />
+                           </Paragraph>
+                           <Paragraph>
+                              <Run Text="Bình thường" />
+                           </Paragraph>
+                        </FlowDocument>
+                     </AduSkin:MetroRichTextBox>
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel Background="#00000000">
+                     <AduSkin:MetroProgressBar
+                                                            Margin="5"
+                                                            Background="#FF555C65"
+                                                            CornerRadius="10"
+                                                            IsEnabled="False"
+                                                            ProgressBarHeight="20"
+                                                            ProgressBarState="None"
+                                                            Value="15" />
+                     <AduSkin:MetroProgressBar
+                                                            x:Name="pb1"
+                                                            Title="MetroProgressBar Điều chỉnh"
+                                                            Margin="5"
+                                                            Background="#FF555C65"
+                                                            CornerRadius="10"
+                                                            ProgressBarHeight="20"
+                                                            ProgressBarState="None"
+                                                            TextHorizontalAlignment="Center"
+                                                            Value="20" />
+                     <AduSkin:MetroProgressBar
+                                                            x:Name="pb2"
+                                                            Title="MetroProgressBar Bình thường"
+                                                            Margin="5"
+                                                            Background="#FF555C65"
+                                                            Maximum="50"
+                                                            TextHorizontalAlignment="Right"
+                                                            Value="0" />
+                     <AduSkin:MetroProgressBar
+                                                            Title="MetroProgressBar sai lầm"
+                                                            Margin="5"
+                                                            ProgressBarState="Error"
+                                                            Value="40" />
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel>
+                     <AduSkin:MetroCanvasGrid
+                                                            Height="100"
+                                                            Margin="5"
+                                                            CornerRadius="2" />
+                     <AduSkin:MetroCanvasGrid
+                                                            Height="100"
+                                                            Margin="5"
+                                                            CornerRadius="2"
+                                                            GridOpacity="1"
+                                                            IsApplyTheme="False"
+                                                            Viewport="0 0 20 20" />
+                  </StackPanel>
+               </Border>
+            </Grid>
+            <Grid>
+               <Border Style="{StaticResource ShowControlBorder}">
+                  <StackPanel Background="#00000000">
+                     <AduSkin:MetroProgressBar
+                                                            Title="MetroProgressBar Chờ đợi lệnh cấm"
+                                                            Margin="60,5,5,5"
+                                                            Background="#FF555C65"
+                                                            IsEnabled="False"
+                                                            ProgressBarState="Wait" />
+                     <AduSkin:MetroProgressBar
+                                                            x:Name="vis"
+                                                            Title="MetroProgressBar 等待"
+                                                            Margin="5"
+                                                            Background="#FF555C65"
+                                                            ProgressBarState="Wait" />
+                     <AduSkin:MetroVisualElement
+                                                            Width="{Binding ActualWidth, ElementName=vis}"
+                                                            Height="{Binding ActualHeight, ElementName=vis}"
+                                                            Visual="{Binding ElementName=vis}"
+                                                            VisualBlurRadius="10"
+                                                            VisualOpacity="0.5" />
+                     <AduSkin:MetroProgressBar
+                                                            Title="MetroProgressBar Chờ điều chỉnh"
+                                                            Margin="5,5,60,5"
+                                                            Background="#FF555C65"
+                                                            CornerRadius="5"
+                                                            ProgressBarHeight="10"
+                                                            ProgressBarState="Wait" />
+                  </StackPanel>
+               </Border>
+            </Grid>
+         </AduSkin:MetroWaterfallFlow>
+      </AduSkin:MetroScrollViewer>
+   </Grid>
+</UserControl>

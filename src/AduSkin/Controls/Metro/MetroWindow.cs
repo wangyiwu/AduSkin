@@ -126,7 +126,6 @@ namespace AduSkin.Controls.Metro
 
       public object ReturnValue { get; set; } //= null;
       public bool EscClose { get; set; } //= false;
-
       
    }
 }

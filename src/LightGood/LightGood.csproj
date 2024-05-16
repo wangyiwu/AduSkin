@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFrameworks>net48;net47</TargetFrameworks>
+    <GenerateDocumentFile>true</GenerateDocumentFile>
+    <UseWpf>true</UseWpf>
+    <UseWindowsForms>true</UseWindowsForms>
+    <NoWarn>$(NoWarn);0067</NoWarn>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <OutputType>WinExe</OutputType>
+    <StartupObject />
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\AduSkin\AduSkin.csproj" />
+    <ProjectReference Include="..\AduVideoPlayer\AduVideoPlayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator" Version="2.0.5" />
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+    <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.8.1" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)' != 'net45'">
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources/**" />
+    <Resource Include="logo.ico" />
+    <Resource Include="logo.png" />
+  </ItemGroup>
+
+</Project>
