@@ -8,9 +8,6 @@ namespace LightGood.ViewModel
 {
    public class MessageBoxDemoViewModel : ViewModelBase
    {
-      /// <summary>
-      /// 命令Command
-      /// </summary>
       public ICommand OpenMessageBox => new RelayCommand<string>((e) =>
       {
          switch (e)

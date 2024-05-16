@@ -35,7 +35,6 @@ namespace LightGood.ViewModel
             new ControlModel("Kiểm soát video", typeof(VideoPlayer)),
             new ControlModel("Menu gấp", typeof(ExpanderMenu)),
             new ControlModel("Container điều hướng", typeof(NavigationPanel)),
-            new ControlModel("Thùng chứa quay", typeof(CarouselContainer)),
             new ControlModel("Che phủ", typeof(CoverFlowDemo),DemoType.Demo,ControlState.New),
             new ControlModel("Mốc thời gian", typeof(TimeLine)),
             new ControlModel("mốc thời gian", typeof(TimeBarDemo),DemoType.Demo,ControlState.New),

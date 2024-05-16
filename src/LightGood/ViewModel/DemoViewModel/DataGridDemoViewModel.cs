@@ -69,7 +69,7 @@ namespace LightGood.ViewModel
          {
             ChatUserModel item7 = new ChatUserModel();
             item7.UserName = "Xinh đẹp";
-            item7.Header = "pack://application:,,,/Resources/Img/Header/头像"+ (index+=1) + ".png";
+            item7.Header = "pack://application:,,,/Resources/Img/Header/avt"+ (index+=1) + ".png";
             item7.Describe = "Không cần nhiều";
             TotalContactList.Add(item7);
             if (index >= 6)
