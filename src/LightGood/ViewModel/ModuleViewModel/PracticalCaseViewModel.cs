@@ -32,7 +32,6 @@ namespace LightGood.ViewModel
          {
             new ControlModel("Menu Win10", typeof(SortGroup)),
             new ControlModel("tải lên hình ảnh", typeof(UploadPic)),
-            new ControlModel("Kiểm soát video", typeof(VideoPlayer)),
             new ControlModel("Menu gấp", typeof(ExpanderMenu)),
             new ControlModel("Container điều hướng", typeof(NavigationPanel)),
             new ControlModel("Che phủ", typeof(CoverFlowDemo),DemoType.Demo,ControlState.New),
